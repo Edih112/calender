@@ -1,0 +1,42 @@
+body {
+    background: black;
+    color:white;
+    width:500px;
+    height:500px;
+    margin:auto;
+    padding:5%;
+}
+html {
+    width:500px;
+    height:500px;
+
+}
+
+input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+#add_button {
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:grey;
+    text-align:center;
+    transition: all 0.2s;
+}
+#add_button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
