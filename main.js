@@ -13,12 +13,11 @@ var saveAs=saveAs||function(e){"use strict";if(typeof e==="undefined"||typeof na
 // section: includes all class info
 //scrapes MyUW and creates calender.ics of UW class schedule.
 async function scrape() {
-    let scheduleJSON = await fetch('https://my.uw.edu/api/v1/schedule/current').then((data) => data.json());
-    if (typeof scheduleJSON != 'object') {
-        console.error('Unable to access data!');
-        console.log('Are you sure you\re on the right page?');
-        return;
+    function handleErrors(response) {
+        if (!response.ok) throw new Error(response.status);
+        return response;
     }
+    let scheduleJSON = await fetch('https://my.uw.edu/api/v1/schedule/current').then(handleErrors).then((data) => data.json()).catch(error => console.log(error));
 
     let cal = ics();
     let sections = scheduleJSON.sections;
