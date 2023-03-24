@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "My Todo List",
+  "name": "MyUW calender converter",
   "version": "1.0",
-  "description": "A plain text description",
+  "description": "I know the UI sucks",
 
   "permissions": ["scripting", "activeTab"],
 
