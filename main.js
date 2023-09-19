@@ -124,7 +124,8 @@ async function scrape() {
         let am_pm = 'am';
         let hr_min = hour.split(':');
         let hr = parseInt(''+hr_min[0]);
-        if (hr > 12) {
+        //make 12:30 pm instead of am
+        if (hr > 12 || (hr == 12 && hr_min[1] != "00")) {
             am_pm = 'pm';
             hr_min[0] = '' + hr - 12;
         }
